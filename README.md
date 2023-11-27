@@ -18,4 +18,9 @@
 ## Build
 
 - Run `npm install`
-- Run `npm run compile`
+- Run `npm run compile` to compile the client.
+- To generate the VSIX package run `npm run package`.
+
+## TODO
+
+[ ] Install LSP for platform. Right now `dslx_ls` must be available on the path for the extension to work.
