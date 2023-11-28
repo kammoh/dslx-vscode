@@ -22,22 +22,23 @@
             "type": "object",
             "title": "Example configuration",
             "properties": {
-                "languageServerExample.maxNumberOfProblems": {
-                    "scope": "resource",
-                    "type": "number",
-                    "default": 100,
-                    "description": "Controls the maximum number of problems produced by the server."
-                },
-                "languageServerExample.trace.server": {
-                    "scope": "window",
+                "dslx.languageServerPath": {
                     "type": "string",
-                    "enum": [
-                        "off",
-                        "messages",
-                        "verbose"
-                    ],
-                    "default": "off",
-                    "description": "Traces the communication between VS Code and the language server."
+                    "default": "dslx_ls",
+                    "scope": "machine-overridable",
+                    "description": "The path to DSLX language server executable, e.g.: /usr/local/bin/dslx_ls"
+                },
+                "dslx.dslxPath": {
+                    "type": "string",
+                    "default": "",
+                    "scope": "machine-overridable",
+                    "description": "Additional paths to search for modules, colon delimited"
+                },
+                "dslx.stdlibPath": {
+                    "type": "string",
+                    "default": "xls/dslx/stdlib",
+                    "scope": "machine-overridable",
+                    "description": "Path to DSLX standard library files"
                 }
             }
         },
@@ -68,12 +69,12 @@
         "compile": "tsc -b",
         "watch": "tsc -b -w",
         "lint": "eslint ./src --ext .ts,.tsx",
-		"package": "vsce package -o dslx.vsix",
+        "package": "vsce package -o dslx.vsix",
         "test": "sh ./scripts/e2e.sh"
     },
-	"dependencies": {
-		"vscode-languageclient": "^8.1.0"
-	},
+    "dependencies": {
+        "vscode-languageclient": "^8.1.0"
+    },
     "devDependencies": {
         "@tsconfig/strictest": "^2.0.1",
         "@types/mocha": "^9.1.0",
