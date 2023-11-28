@@ -5,6 +5,7 @@
     "author": "Kamyar Mohajerani",
     "license": "Apache 2.0",
     "version": "0.0.1",
+    "preview": true,
     "icon": "images/xls_antmicro_128x128.png",
     "repository": {
         "type": "git",
