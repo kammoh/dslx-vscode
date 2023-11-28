@@ -1,5 +1,11 @@
 # DSLX Language Support for Visual Studio Code
 
+<div align='center'>
+<img src='https://raw.githubusercontent.com/kammoh/dslx-vscode/main/images/xls_logo.png' alt='XLS Logo'>
+</div>
+
+
+
 ## Functionality
 
 - Completions
